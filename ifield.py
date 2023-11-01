@@ -3,10 +3,10 @@ from abc import ABC, abstractmethod
 
 class ICommonField(ABC):
 
-    def __init__(self, name, blank=0, format=None):
+    def __init__(self, name, blank=0, format_fn=None):
         self.name = name
         self.blank = blank
-        self.format = format
+        self.format = format_fn
 
     @property
     @abstractmethod
